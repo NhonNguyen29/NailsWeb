@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nails Salon — 10 Index Design Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0c0e15;
+      --surface: rgba(23, 26, 35, 0.9);
+      --border: rgba(255, 255, 255, 0.11);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #e18aaa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 18% 0%, rgba(225, 138, 170, 0.22), transparent 38%),
+        radial-gradient(circle at 85% 15%, rgba(192, 132, 252, 0.2), transparent 40%),
+        radial-gradient(circle at 50% 95%, rgba(56, 189, 248, 0.12), transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='0.8'%3E%3Cpath d='M45 0 L90 45 L45 90 L0 45 Z'/%3E%3Ccircle cx='45' cy='45' r='2' fill='%23e18aaa' fill-opacity='0.14'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(1240px, 92vw);
+      margin: 0 auto;
+      padding: 44px 0 80px;
+    }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(225, 138, 170, 0.16);
+      color: #f9a8d4;
+      border: 1px solid rgba(225, 138, 170, 0.34);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+    .subtitle {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0;
+      font-size: 0.98rem;
+    }
+    .top-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: transform 0.18s ease, filter 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, #e18aaa, #c084fc);
+      color: #120c18;
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .info-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .info-pill {
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    .info-pill strong { display: block; font-size: 0.95rem; margin-bottom: 4px; }
+    .info-pill span { color: var(--muted); font-size: 0.84rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(225, 138, 170, 0.55);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+    }
+    .preview-banner {
+      height: 165px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .preview-num {
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.92;
+    }
+    .preview-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.72rem;
+      font-weight: 700;
+    }
+    .swatches { display: flex; gap: 6px; }
+    .swatch {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .card-meta {
+      font-size: 0.78rem;
+      color: #f9a8d4;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .card-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      flex: 1;
+    }
+    .card-fonts {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .card-actions .btn {
+      flex: 1;
+      justify-content: center;
+      padding: 10px 14px;
+      font-size: 0.86rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div>
+        <span class="badge">Nail Salon Website Collection &middot; 10 Curated Themes</span>
+        <h1>10 Index Templates Showcase</h1>
+        <p class="subtitle">
+          Choose your favorite aesthetic from 10 complete English Nail Salon designs with custom backgrounds &amp; ornamental motifs.
+          Every template includes <strong>Home, Gallery, Menu, Contact Us, Date-Based Booking</strong>, and <strong>JavaScript Call Us</strong>,
+          synced live with the <strong>Admin &amp; Staff Portal</strong>.
+        </p>
+      </div>
+      <div class="top-actions">
+        <a href="admin.html" class="btn btn-primary">🔐 Open Admin / Staff Portal</a>
+        <a href="index-1.html" class="btn btn-outline">Preview #1 Maison Rose →</a>
+      </div>
+    </header>
+
+    <section class="info-strip">
+      <div class="info-pill">
+        <strong>👑 Admin Login (Full Control)</strong>
+        <span>User: <code>admin</code> &middot; Pass: <code>admin123</code> (Edit all text, upload images, add/delete menu &amp; gallery, manage bookings)</span>
+      </div>
+      <div class="info-pill">
+        <strong>👩‍🎨 Staff Login (Images &amp; Prices Only)</strong>
+        <span>User: <code>staff</code> &middot; Pass: <code>staff123</code> (Change images &amp; prices only — all other edits blocked with 403)</span>
+      </div>
+      <div class="info-pill">
+        <strong>⚡ Live Multi-Tab Sync</strong>
+        <span>Edit any price, photo, or headline in Admin/Staff and watch all 10 index pages update automatically.</span>
+      </div>
+    </section>
+
+    <main class="grid" id="themes-grid"></main>
+  </div>
+
+  <script src="js/default-data.js"></script>
+  <script>
+    const PATTERNS = {
+      1: `radial-gradient(circle at 85% 20%, rgba(183,110,121,0.28), transparent 50%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23b76e79' stroke-opacity='0.18' stroke-width='1'%3E%3Cpath d='M40 8 C48 20,48 30,40 40 C32 30,32 20,40 8Z'/%3E%3Cpath d='M40 72 C48 60,48 50,40 40 C32 50,32 60,40 72Z'/%3E%3Cpath d='M8 40 C20 32,30 32,40 40 C30 48,20 48,8 40Z'/%3E%3Cpath d='M72 40 C60 32,50 32,40 40 C50 48,60 48,72 40Z'/%3E%3C/g%3E%3C/svg%3E")`,
+      2: `radial-gradient(circle at 80% 20%, rgba(212,175,55,0.26), transparent 55%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23d4af37' stroke-opacity='0.22'/%3E%3C/svg%3E")`,
+      3: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32' viewBox='0 0 64 32'%3E%3Cg fill='none' stroke='%23524b42' stroke-opacity='0.16'%3E%3Cpath d='M0 32 A16 16 0 0 1 32 32 M6 32 A10 10 0 0 1 26 32'/%3E%3Cpath d='M32 32 A16 16 0 0 1 64 32 M38 32 A10 10 0 0 1 58 32'/%3E%3C/g%3E%3C/svg%3E")`,
+      4: `radial-gradient(circle at 85% 25%, rgba(63,106,79,0.22), transparent 55%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cpath d='M18 60 Q35 35 54 12' fill='none' stroke='%233f6a4f' stroke-opacity='0.2'/%3E%3Cpath d='M30 44 C18 40,18 28,32 32' fill='none' stroke='%233f6a4f' stroke-opacity='0.2'/%3E%3C/svg%3E")`,
+      5: `radial-gradient(circle at 80% 20%, rgba(230,57,122,0.22), transparent 55%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 8 L32 15 L39 17 L32 19 L30 26 L28 19 L21 17 L28 15 Z' fill='%23e6397a' fill-opacity='0.22'/%3E%3C/svg%3E")`,
+      6: `linear-gradient(to right, rgba(10,10,10,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,10,0.08) 1px, transparent 1px)`,
+      7: `radial-gradient(circle at 80% 20%, rgba(31,122,140,0.22), transparent 55%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cpath d='M0 20 Q20 6 40 20 T80 20' fill='none' stroke='%231f7a8c' stroke-opacity='0.22'/%3E%3C/svg%3E")`,
+      8: `radial-gradient(circle at 80% 20%, rgba(224,168,153,0.24), transparent 50%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M32 6 C42 18,42 26,32 32 C22 26,22 18,32 6Z M32 58 C42 46,42 38,32 32 C22 38,22 46,32 58Z' fill='none' stroke='%23e0a899' stroke-opacity='0.22'/%3E%3C/svg%3E")`,
+      9: `radial-gradient(circle at 85% 20%, rgba(196,100,67,0.24), transparent 50%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cpath d='M16 64 V32 A19 19 0 0 1 54 32 V64' fill='none' stroke='%23c46443' stroke-opacity='0.2'/%3E%3C/svg%3E")`,
+      10: `radial-gradient(circle at 18% 20%, rgba(192,132,252,0.36), transparent 50%), radial-gradient(circle at 85% 80%, rgba(56,189,248,0.28), transparent 50%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M32 20 L34 30 L44 32 L34 34 L32 44 L30 34 L20 32 L30 30 Z' fill='%23f472b6' fill-opacity='0.34'/%3E%3C/svg%3E")`
+    };
+
+    const grid = document.getElementById('themes-grid');
+    grid.innerHTML = window.NAIL_SALON_THEMES.map((t) => {
+      const [bg, accent, text] = t.palette;
+      const bgSize = t.id === 6 ? 'background-size: 28px 28px;' : '';
+      return `
+        <article class="card">
+          <div class="preview-banner" style="background-color:${bg};background-image:${PATTERNS[t.id]};${bgSize}color:${text};">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="preview-num" style="color:${accent};">INDEX-${t.id}.HTML</span>
+              <div class="swatches">
+                ${t.palette.map((c) => `<span class="swatch" style="background:${c};" title="${c}"></span>`).join('')}
+              </div>
+            </div>
+            <div>
+              <div class="preview-title">${t.name}</div>
+              <div style="font-size:0.82rem;opacity:0.85;">${t.style}</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Style #${t.id} &middot; ${t.style}</div>
+            <p class="card-desc">${t.description}</p>
+            <div class="card-fonts">Fonts: ${t.fonts}</div>
+            <div class="card-actions">
+              <a href="${t.file}" class="btn btn-primary">Open Live Preview</a>
+              <a href="${t.file}#booking" class="btn btn-outline">Booking</a>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+  </script>
+</body>
+</html>

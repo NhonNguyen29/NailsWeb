@@ -1,0 +1,62 @@
+/* Theme 4: Botanica Spa — Organic Sage, Eucalyptus Foliage & Watercolor Washes */
+:root {
+  --bg: #f3f7f2;
+  --bg-alt: #e4efe2;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-2: #edf4ec;
+  --text: #1c2b22;
+  --text-muted: #506659;
+  --accent: #3f6a4f;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(63, 106, 79, 0.14);
+  --border: rgba(28, 43, 34, 0.13);
+  --shadow: 0 18px 42px rgba(28, 43, 34, 0.08);
+  --radius-sm: 14px;
+  --radius-md: 24px;
+  --radius-lg: 36px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(134, 182, 148, 0.24), transparent 38%),
+    radial-gradient(circle at 92% 60%, rgba(182, 214, 188, 0.28), transparent 42%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%233f6a4f' stroke-opacity='0.09' stroke-width='1.2'%3E%3Cpath d='M35 120 Q70 70 105 20'/%3E%3Cpath d='M52 95 C30 88, 28 66, 52 72'/%3E%3Cpath d='M70 70 C92 64, 98 44, 72 48'/%3E%3Cpath d='M86 48 C68 38, 66 20, 88 26'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(220, 236, 219, 0.72) 0%, rgba(247, 250, 246, 0.55) 60%);
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(63, 106, 79, 0.1), transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 16 C48 28, 48 44, 40 56 C32 44, 32 28, 40 16Z' fill='%233f6a4f' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.hero-img-wrap {
+  border-radius: 48% 52% 32px 32px / 24% 24% 32px 32px;
+  border: 6px solid rgba(255, 255, 255, 0.9);
+}
+
+.section-head::after {
+  content: '🌿';
+  letter-spacing: 0;
+}
+
+.btn {
+  border-radius: 999px;
+}
+
+.gallery-card {
+  border-radius: 28px;
+}
+
+.highlight-pill {
+  background: #e9f2e8;
+  border-color: rgba(63, 106, 79, 0.22);
+}

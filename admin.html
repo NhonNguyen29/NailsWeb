@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salon Management Portal — Admin & Staff</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div id="offline-banner" class="offline-banner">You are offline. Changes are saved locally in IndexedDB.</div>
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- LOGIN VIEW -->
+  <section id="login-view" class="login-screen">
+    <div class="login-card">
+      <div class="login-brand">
+        <span class="pill">Salon Portal &middot; Prototype G3</span>
+        <h1>Lumiere Nail Atelier</h1>
+        <p>Sign in as <strong>Admin</strong> (full control) or <strong>Staff</strong> (images &amp; prices only).</p>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="login-user">Username</label>
+          <input type="text" id="login-user" placeholder="admin or staff" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="login-pass">Password</label>
+          <input type="password" id="login-pass" placeholder="Enter password" autocomplete="current-password" required />
+        </div>
+        <div id="login-error" class="alert error"></div>
+        <button type="submit" class="btn btn-primary full-w">Sign In</button>
+      </form>
+
+      <div class="demo-box">
+        <div class="demo-title">Quick Demo Credentials (Local Prototype)</div>
+        <div class="demo-grid">
+          <button type="button" class="demo-btn" id="fill-admin">
+            <strong>👑 Admin</strong>
+            <span>admin / admin123</span>
+            <small>Add/Edit/Delete all text, images, menu, gallery &amp; bookings</small>
+          </button>
+          <button type="button" class="demo-btn" id="fill-staff">
+            <strong>👩‍🎨 Staff</strong>
+            <span>staff / staff123</span>
+            <small>Change images &amp; prices ONLY (all other edits locked 403)</small>
+          </button>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:18px;">
+        <a href="index.html" class="back-link">← Back to 10 Salon Designs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD VIEW -->
+  <div id="portal-view" class="portal-layout" style="display:none;">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h2 id="sb-brand">Lumiere Nail</h2>
+        <span id="role-badge" class="role-badge">ADMIN</span>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <button type="button" class="nav-item active" data-tab="tab-overview">📊 Bookings &amp; Inbox</button>
+        <button type="button" class="nav-item" data-tab="tab-site">📝 Site Info &amp; Banners</button>
+        <button type="button" class="nav-item" data-tab="tab-menu">💅 Menu &amp; Pricing</button>
+        <button type="button" class="nav-item" data-tab="tab-gallery">🖼️ Gallery Photos</button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="signed-in-as">
+          <small>Signed in as</small>
+          <strong id="sb-user-name"></strong>
+        </div>
+        <a href="index.html" class="btn btn-outline full-w" style="margin-bottom:8px;">🌐 View 10 Templates</a>
+        <button type="button" id="logout-btn" class="btn btn-danger-outline full-w">Sign Out</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1 id="page-title">Bookings &amp; Inbox</h1>
+          <p id="page-subtitle" class="muted">Live changes sync automatically to all 10 index pages.</p>
+        </div>
+        <div class="topbar-actions">
+          <select id="preview-theme-select" class="select-sm" aria-label="Open Theme"></select>
+          <button type="button" id="open-preview-btn" class="btn btn-outline">Open Live Site ↗</button>
+          <button type="button" id="reset-data-btn" class="btn btn-danger-outline admin-only">↺ Reset Defaults</button>
+        </div>
+      </header>
+
+      <div id="staff-notice" class="staff-banner" style="display:none;">
+        <strong>👩‍🎨 Staff Mode Active (Restricted Permissions):</strong>
+        You can <strong>upload/change images</strong> and <strong>update service prices</strong>. Editing text, adding/deleting items, or accessing Bookings/Settings is restricted to Admin (<code>403 Forbidden</code>).
+      </div>
+
+      <!-- TAB 1: OVERVIEW & BOOKINGS -->
+      <section id="tab-overview" class="tab-panel active"></section>
+
+      <!-- TAB 2: SITE INFO & BANNERS -->
+      <section id="tab-site" class="tab-panel"></section>
+
+      <!-- TAB 3: MENU & PRICING -->
+      <section id="tab-menu" class="tab-panel"></section>
+
+      <!-- TAB 4: GALLERY PHOTOS -->
+      <section id="tab-gallery" class="tab-panel"></section>
+    </main>
+  </div>
+
+  <script src="js/default-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

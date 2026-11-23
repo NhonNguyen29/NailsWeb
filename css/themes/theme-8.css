@@ -1,0 +1,54 @@
+/* Theme 8: Velvet Bordeaux — Baroque Filigree, Deep Wine & Rose-Champagne Glow */
+:root {
+  --bg: #18080e;
+  --bg-alt: #240d16;
+  --surface: rgba(46, 19, 30, 0.92);
+  --surface-2: #3a1826;
+  --text: #fdf4f0;
+  --text-muted: #d1b0ba;
+  --accent: #e0a899;
+  --accent-contrast: #240c14;
+  --accent-soft: rgba(224, 168, 153, 0.16);
+  --border: rgba(224, 168, 153, 0.26);
+  --shadow: 0 24px 56px rgba(0, 0, 0, 0.55);
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 80% 15%, rgba(224, 168, 153, 0.16), transparent 44%),
+    radial-gradient(circle at 15% 75%, rgba(140, 32, 68, 0.25), transparent 48%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23e0a899' stroke-opacity='0.09' stroke-width='0.9'%3E%3Cpath d='M50 8 C66 24, 66 36, 50 50 C34 36, 34 24, 50 8Z'/%3E%3Cpath d='M50 92 C66 76, 66 64, 50 50 C34 64, 34 76, 50 92Z'/%3E%3Cpath d='M8 50 C24 34, 36 34, 50 50 C36 66, 24 66, 8 50Z'/%3E%3Cpath d='M92 50 C76 34, 64 34, 50 50 C64 66, 76 66, 92 50Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(224, 168, 153, 0.1), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M24 6 L28 24 L24 42 L20 24 Z' fill='%23e0a899' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.hero-img-wrap {
+  border: 2px solid rgba(224, 168, 153, 0.5);
+  outline: 1px solid rgba(224, 168, 153, 0.25);
+  outline-offset: 8px;
+}
+
+.section-head::after {
+  content: '⚜';
+  font-size: 1.2rem;
+}
+
+.section-title,
+.hero-title {
+  letter-spacing: 0.04em;
+}
+
+.alert-box.success { color: #86efac; }
+.alert-box.error { color: #fca5a5; }

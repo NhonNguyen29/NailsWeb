@@ -1,0 +1,86 @@
+/* Theme 6: Vogue Atelier — High-Contrast Swiss Editorial Grid & Halftone Marks */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f4f4f4;
+  --surface: #ffffff;
+  --surface-2: #f7f7f7;
+  --text: #0a0a0a;
+  --text-muted: #525252;
+  --accent: #0a0a0a;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(10, 10, 10, 0.08);
+  --border: #111111;
+  --shadow: 8px 8px 0px #0a0a0a;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --font-display: 'Bodoni Moda', Georgia, serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(to right, rgba(10, 10, 10, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(10, 10, 10, 0.035),
+      rgba(10, 10, 10, 0.035) 2px,
+      transparent 2px,
+      transparent 14px
+    );
+}
+
+.site-header {
+  border-bottom: 2px solid #0a0a0a;
+}
+
+.brand-logo .brand-name {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.hero-img-wrap {
+  border: 2px solid #0a0a0a;
+  box-shadow: 12px 12px 0 #0a0a0a;
+}
+
+.section-head::after {
+  content: '■ ■ ■';
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+}
+
+.menu-card,
+.booking-shell,
+.contact-info-card,
+.contact-form-card {
+  border: 1.5px solid #0a0a0a;
+  box-shadow: 6px 6px 0 #0a0a0a;
+}
+
+.filter-tab {
+  border-radius: 0;
+  border: 1.5px solid #0a0a0a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-width: 1.5px;
+}
