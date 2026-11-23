@@ -17,8 +17,8 @@ A curated collection of **10 distinct English Nail Salon website templates** (`i
   10. Aura Chrome (Futuristic Y2K Lavender & Chrome)
 - **Full Salon Sections (English)**: Home, Gallery (+ Lightbox), Menu, Contact Us, Date-Based Booking, and interactive JavaScript Call Us modal.
 - **Role-Based Portal** (`admin.html`):
-  - **Admin** (`admin` / `admin123`): Full control — add/edit/delete services, gallery, all text/site info, upload images, manage bookings/callbacks/messages.
-  - **Staff** (`staff` / `staff123`): Restricted to changing **images** and **service prices** only (`403 Forbidden` for all Admin-only sections).
+  - **Admin**: Full control — add/edit/delete services, gallery, all text/site info, upload images, manage bookings/callbacks/messages.
+  - **Staff**: Restricted to changing **images** and **service prices** only (`403 Forbidden` for all Admin-only sections).
 
 ## Deploy on Vercel
 Import this GitHub repository in [Vercel](https://vercel.com/new) with **Framework Preset: Other** and Root Directory `./`. No build step required.

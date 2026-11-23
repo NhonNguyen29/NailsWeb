@@ -837,16 +837,6 @@
     window.addEventListener('offline', updateOnline);
     updateOnline();
 
-    // Quick fill buttons
-    $('#fill-admin').addEventListener('click', () => {
-      $('#login-user').value = 'admin';
-      $('#login-pass').value = 'admin123';
-    });
-    $('#fill-staff').addEventListener('click', () => {
-      $('#login-user').value = 'staff';
-      $('#login-pass').value = 'staff123';
-    });
-
     // Login form
     $('#login-form').addEventListener('submit', async (e) => {
       e.preventDefault();

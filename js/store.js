@@ -257,7 +257,7 @@
         localStorage.setItem(AUTH_KEY, JSON.stringify(sess));
         return sess;
       }
-      const err = new Error('Invalid credentials. Use admin/admin123 or staff/staff123.');
+      const err = new Error('Invalid username or password. Please try again.');
       err.code = 401;
       throw err;
     },

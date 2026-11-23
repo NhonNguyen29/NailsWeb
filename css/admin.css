@@ -343,7 +343,7 @@ input:disabled, select:disabled, textarea:disabled {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 275px), 1fr));
   gap: 18px;
 }
 
@@ -473,6 +473,34 @@ th {
 
 @media (max-width: 900px) {
   .portal-layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; height: auto; }
+  .sidebar {
+    position: static;
+    height: auto;
+    padding: 18px 16px;
+    gap: 14px;
+  }
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    margin: 12px 0;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-height: 42px;
+  }
+  .main-content {
+    padding: 20px 14px 48px;
+  }
+  .topbar h1 { font-size: 1.35rem; }
+  .topbar-actions { width: 100%; }
+  .topbar-actions .select-sm,
+  .topbar-actions .btn { flex: 1; min-height: 42px; }
+  .panel-card { padding: 16px 14px; }
   .grid-2 { grid-template-columns: 1fr; }
+  .login-card { padding: 24px 18px; }
+  input, select, textarea { font-size: 16px; min-height: 44px; }
+  .btn { min-height: 42px; }
 }

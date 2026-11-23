@@ -115,8 +115,19 @@
     .info-pill span { color: var(--muted); font-size: 0.84rem; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+      gap: 22px;
+    }
+    @media (max-width: 768px) {
+      body { background-attachment: scroll; }
+      .wrap { padding: 28px 0 60px; }
+      .topbar { padding-bottom: 24px; margin-bottom: 26px; }
+      .top-actions { width: 100%; }
+      .top-actions .btn { flex: 1; justify-content: center; min-height: 44px; }
+      .preview-banner { height: 148px; padding: 16px; }
+      .preview-title { font-size: 1.48rem; }
+      .card-body { padding: 16px; }
+      .card-actions .btn { min-height: 42px; }
     }
     .card {
       background: var(--surface);
@@ -222,16 +233,16 @@
 
     <section class="info-strip">
       <div class="info-pill">
-        <strong>👑 Admin Login (Full Control)</strong>
-        <span>User: <code>admin</code> &middot; Pass: <code>admin123</code> (Edit all text, upload images, add/delete menu &amp; gallery, manage bookings)</span>
+        <strong>🎨 10 Bespoke Salon Aesthetics</strong>
+        <span>Each template features its own color palette, typography pairing, and handcrafted decorative background motifs.</span>
       </div>
       <div class="info-pill">
-        <strong>👩‍🎨 Staff Login (Images &amp; Prices Only)</strong>
-        <span>User: <code>staff</code> &middot; Pass: <code>staff123</code> (Change images &amp; prices only — all other edits blocked with 403)</span>
+        <strong>📅 Date-Based Booking &amp; Call Us</strong>
+        <span>Real-time slot availability by date, instant click-to-call modal, live open status, and callback requests.</span>
       </div>
       <div class="info-pill">
-        <strong>⚡ Live Multi-Tab Sync</strong>
-        <span>Edit any price, photo, or headline in Admin/Staff and watch all 10 index pages update automatically.</span>
+        <strong>📱 Mobile-First &amp; Live Portal Sync</strong>
+        <span>Optimized for smartphones and tablets, with live updates from the role-based Admin &amp; Staff management portal.</span>
       </div>
     </section>
 
